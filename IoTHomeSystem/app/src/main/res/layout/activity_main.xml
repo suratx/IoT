@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/uh_img"
+    tools:context=".MainActivity"
+    >
+
+
+    <Switch
+        android:id="@+id/system"
+        android:switchMinWidth="56dp"
+        android:layout_width="327dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="8dp"
+        android:capitalize="none"
+        android:checked="false"
+        android:clickable="true"
+        android:minHeight="48dp"
+        android:text="Welcome Home"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#318E99"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lights"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.616"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:checked="false" />
+
+    <Switch
+        android:id="@+id/lights"
+        android:layout_width="191dp"
+        android:layout_height="80dp"
+        android:capitalize="none"
+        android:checked="false"
+        android:clickable="true"
+        android:text="LED Lights"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#318E99"
+        android:textColorLink="#673AB7"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/motion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/system"
+        app:layout_constraintVertical_bias="0.284"
+        tools:checked="false" />
+
+    <TextView
+        android:id="@+id/humidView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humid Value"
+        android:textColor="#515A5A"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/system"
+        app:layout_constraintVertical_bias="0.923" />
+
+    <TextView
+        android:id="@+id/tempView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temp. Value"
+        android:textColor="#515A5A"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/system"
+        app:layout_constraintVertical_bias="0.843" />
+
+    <TextView
+        android:id="@+id/THHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="Thermometer - Hygrometer  "
+        android:textColor="#34495E "
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/system"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <TextView
+        android:id="@+id/motionHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:text="Motion Activity"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#34495E "
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/system"
+        app:layout_constraintVertical_bias="0.433" />
+
+    <TextView
+        android:id="@+id/motion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Motion is detected..."
+        android:textColor="#34495E "
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/system"
+        app:layout_constraintVertical_bias="0.527" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="lights" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,2 @@
+com/example/iothomesystem/BuildConfig.java
+ com.example.iothomesystem.BuildConfig
